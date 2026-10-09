@@ -1,5 +1,2 @@
-#include <bits/stdc++.h>
-using namespace std;
-#include "Node.hpp"
-#include"DoublyLL.hpp"
+// Compatibility include for older demos. Prefer including LRUCache.hpp directly.
 #include "LRUCache.hpp"
