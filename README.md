@@ -1,6 +1,6 @@
 # Thread-safe LRU Cache (C++17)
 
-An **in-memory software LRU (Least Recently Used) cache** implemented in C++17.
+An **in-memory LRU (Least Recently Used) cache** implemented in C++17.
 This project demonstrates templates, hash-based lookup, an intrusive doubly
 linked list, RAII ownership, and mutex synchronization. It is **not** a
 hardware CPU/GPU cache simulator or a compiler project.
@@ -58,10 +58,3 @@ entry, string values (which catch invalid numeric cache-miss sentinels),
 single-entry capacity, rejection of zero capacity, non-default-constructible
 keys with custom hashing, and basic concurrent read/write operations.
 
-## Interview discussion
-
-Be ready to explain why an unordered map and doubly linked list are combined,
-who owns each heap allocation, how eviction avoids dangling pointers, the
-difference between average and worst-case complexity, why `std::lock_guard`
-does not itself guarantee lock-free performance, and why a *software* LRU cache
-is distinct from a CPU's hardware cache-replacement policy.
