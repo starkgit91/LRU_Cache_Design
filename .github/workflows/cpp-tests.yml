@@ -1,0 +1,17 @@
+name: C++17 tests
+on:
+  push:
+  pull_request:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compile tests
+        run: g++ -std=c++17 -Wall -Wextra -Wpedantic -Werror -pthread -I. tests/test_lru.cpp -o lru_tests
+      - name: Run tests
+        run: ./lru_tests
+      - name: Compile demo
+        run: g++ -std=c++17 -Wall -Wextra -Wpedantic -Werror -pthread -I. main.cpp -o lru_demo
+      - name: Run demo
+        run: ./lru_demo
